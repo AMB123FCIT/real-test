@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Adding object in array</title> 
+    <style> 
+        body { 
+            text-align: center; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+  
+    <button onclick="pushFunction('Dish Name',6)">Add Dish</button>  <br> <br>
+    <button onclick="show()">Show</button>  
+  
+    <p id="geeks"></p> 
+  
+    <script> 
+      var list = []; 
+     function show() { 
+
+      document.getElementById("geeks").innerHTML = "" ; 
+     var i;
+     var d=0;
+for (i = 0; i < list.length; i++) {
+     if(i%2==0){
+  document.getElementById("geeks").innerHTML += "Dish : "+list[i] ; 
+  }else {
+  document.getElementById("geeks").innerHTML += " Price : "+list[i]+"<br>" ;
+  d+=parseInt(list[i]);
+  }
+  
+}
+document.getElementById("geeks").innerHTML += " Full Price :"+d ;
+           
+        } 
+        function pushFunction(x,y) { 
+            list.push(x,y); 
+            
+        } 
+    </script> 
+  
+</body> 
+  
+</html> 
